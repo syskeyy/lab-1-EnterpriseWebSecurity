@@ -1,0 +1,28 @@
+* {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.chargeContainer{
+    padding: 20px;
+    background-color: rgb(131, 131, 131);
+
+}
+
+.budgetContainer{
+    background-color: rgb(255, 241, 223);
+    height: 60vh;
+    padding: 20px;
+}
+
+.buttonBudget{
+    padding: 20px;
+}
+
+.chargeContainer img{
+    padding: 20px;
+border-radius: 200px;
+}
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="/static/styles.css">
+
+<html lang="en">
+<head>
+  <title>Price Calculator</title>
+</head>
+<body>
+
+<div class="chargeContainer">
+  <h1>How much to charge?</h1>
+  <p>If you were a freelance web designer, how much should you charge for a website? Fill out the form and find out!</p>
+  <img src="/static/calculator.avif" alt="calculator" width="200" height="200">
+</div>
+
+<div class="budgetContainer">
+  <form id="budget" action="javascript:calculatePrice()">
+    <label for="salary">What annual salary seems suitable for you?</label>
+    <input type="text" id="salary" name="salary"/><br><br>
+    <label for="days">How many days do you think it will take you to make the website?</label>
+    <input type="text" id="days" name="days"/><br><br>
+    <input class="buttonBudget" type="submit" value="Calculate your price!"><br><br>
+    <label id="finalPrice"> ??? </label>
+  </form>
+</div>
+
+
+<script>
+  function calculatePrice() {
+    var s = document.getElementById("salary").value;
+    var d = document.getElementById("days").value;
+    console.log("Calculating price")
+    console.log(s)
+    console.log(d)
+    let finalPrice = 0;
+    dailyRate = s/365;
+    finalPrice = dailyRate * d;
+    finalPriceRound = Math.round(finalPrice/50)*50;
+    document.getElementById("finalPrice").innerHTML = finalPriceRound;
+  }
+  </script>
+
+</body>
+</html>
